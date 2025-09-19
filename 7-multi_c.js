@@ -1,11 +1,14 @@
 const x = Number(process.argv[2]);
-let i = 0;
 
-if (isNaN(x) || x <= 0) {
+// Check if the argument is a valid integer.
+if (isNaN(x)) {
   console.log("Missing number of occurrences");
-} else {
-  while (i < x) {
+} 
+// If it is a positive integer, run the loop.
+else if (x > 0) {
+  for (let i = 0; i < x; i++) {
     console.log("C is fun");
-    i++;
   }
 }
+// If the number is 0 or negative, this section is skipped, and nothing is printed.
+
